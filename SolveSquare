@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include<math.h>
+
+const int INFINIT_ROOTS = -1;
+
+double Input (const char name[]);
+int SolveSquare (double a, double b, double c, double * x1, double * x2);
+
+int main()
+{
+    printf("---SolveSquare v.1 by KseniaShevchuk\n");
+
+    printf("Please, enter a, b and c for ax^2 + bx + c = 0\n");
+    double a = Input("a"), b = Input("b"), c = Input("c");
+    double x1 = 0, x2 = 0;
+
+    int nRoots = SolveSquare (a, b, c, &x1, &x2);
+
+    if (nRoots == 2)
+        printf("x1 = %lg\n x2=%lg\n", x1, x2);
+    if (nRoots == 1)
+        printf("It is only one root here: x = %lg\n", x1);
+    if (nRoots == 0)
+        printf("Sorry, no roots for these numbers\n");
+    if (nRoots == -1)
+        printf("There are infinitely roots for these numbers\n");
+
+    printf("Thank you for using this program!\n");
+    return 0;
+}
+
+double Input(const char name[])
+{
+        printf("Please, enter %s: ", name);
+        double val = 0;
+        scanf ("%lg", &val);
+        printf("\n");
+        return val;
+}
+
+int SolveSquare(double a, double b, double c, double * x1, double * x2)
+{
+
+}
