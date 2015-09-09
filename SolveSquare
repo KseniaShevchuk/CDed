@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include<math.h>
+#include <math.h>
 
 const int INFINIT_ROOTS = -1;
 
@@ -40,5 +40,5 @@ double Input(const char name[])
 
 int SolveSquare(double a, double b, double c, double * x1, double * x2)
 {
-    blz
+    
 }
